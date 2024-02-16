@@ -3,6 +3,8 @@ const http = require("http");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
+const { connectDB } = require("./db/dbconnection");
+const routes = require("./routes/v1")
 
 const app = express();
 
