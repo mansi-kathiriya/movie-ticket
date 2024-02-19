@@ -1,5 +1,6 @@
 const { userService } = require("../services");
 const { createToken } = require("../middleware/auth");
+const { send_mail } = require("../services/email.service");
 
 /** Register user */
 const register = async (req, res) => {
@@ -16,6 +17,10 @@ const register = async (req, res) => {
   };
 
   const user = await userService.register(body);
+
+  if(user){
+    let email = await send_mail(body.email, "Hello welcome", "welcome mail")
+  }
 
   res.status(200).json({
     success: true,
