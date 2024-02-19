@@ -2,20 +2,46 @@ const express = require("express");
 const { userController } = require("../../controllers");
 const { userValidation } = require("../../validations");
 const validate = require("../../middleware/validate");
+const { autheticate } = require("../../middleware/auth");
 
 const router = express.Router();
 
-//  register
+/** register user */
 router.post(
-    "/register", 
-    validate(userValidation.Register), 
+    "/register",
+    autheticate,
+    validate(userValidation.Register),
     userController.register
 );
 
-// login user
+/**  login user */
 router.post(
-    "/login", 
+    "/login",
     userController.login
+)
+
+/** Get user */
+router.get(
+    "/user-list",
+    userController.getUserList
+)
+
+/** Get user details by id */
+router.get(
+    "/user-details/:userId",
+    userController.getUserDetails
+)
+
+/** update user */
+router.put(
+    "/update-details/:userId",
+    userController.updateDetails
+)
+
+/** Delete user */
+router.delete(
+    "/user-delete/:userId",
+    userController.deleteUser
 )
 
 module.exports = router;

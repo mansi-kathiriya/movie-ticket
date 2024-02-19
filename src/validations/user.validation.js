@@ -1,11 +1,13 @@
 const Joi = require("joi");
 
-// Register
+/** Register */
 const Register = {
     body: Joi.object().keys({
-        name: Joi.string().required().trim(),
+        first_name: Joi.string().required().trim(),
+        last_name: Joi.string().required().trim(),
         email: Joi.string().required().trim(),
         password: Joi.string().required().trim(),
+        contact: Joi.number().required(),
     }),
 };
 

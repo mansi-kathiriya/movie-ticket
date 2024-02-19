@@ -18,15 +18,18 @@ app.use(cookieParser())
 app.set("view wngine","ejs");
 
 // routes
-app.use("v1", routes)
+app.use("/v1", routes)
 
-app.get("/", (req,res,next) => {
-    res.render("index")
-})
+app.use((req,res,next) => {
+    next(new Error("Route not found!"));
+});
+
 // db
 connectDB();
 
 // server
-http.createServer(app).listen(process.env.PORT, () => {
-    console.log("server started");
-})
+const server = http.createServer(app);
+
+server.listen(process.env.PORT, () => {
+    console.log("Server listning port number "+ process.env.PORT);
+});

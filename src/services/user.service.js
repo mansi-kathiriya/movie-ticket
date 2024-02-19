@@ -5,10 +5,14 @@ const register = async (reqBody) => {
 };
 
 const login = async (email) => {
-    return User.findOne({email});
+    return User.findOne({ email });
   };
 
-const getUserList = async (filter, options) => {
+  const getUserByEmail = async (email) => {
+    return User.findOne({ email });
+};
+
+const getUserList = async () => {
   return User.find()
 };
 
@@ -28,6 +32,7 @@ module.exports = {
   register,
   login,
   getUserList,
+  getUserByEmail,
   getUserById,
   updateDetails,
   deleteUser
