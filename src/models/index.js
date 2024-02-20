@@ -1,1 +1,12 @@
 module.exports.User = require("./user.model");
+module.exports.Movie = require("./movie.model");
+module.exports.Theater = require("./theater.model");
+module.exports.Showtime = require("./showtime.model");
+module.exports.Booking = require("./booking.model");
+module.exports.Ticket = require("./ticket.model");
+module.exports.Seat = require("./seat.model");
+module.exports.Review = require("./review.model");
+module.exports.Payment = require("./payment.model");
+module.exports.Advertisement = require("./advertisement.model");
+module.exports.Screen = require("./screen.model");
+module.exports.Movielanguage = require("./movielanguage.model");
