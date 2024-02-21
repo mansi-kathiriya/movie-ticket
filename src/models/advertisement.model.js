@@ -15,11 +15,11 @@ const advertisementSchema = new mongoose.Schema(
             trim: true
         },
         start_date: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         end_date: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         cost: {
@@ -37,6 +37,6 @@ const advertisementSchema = new mongoose.Schema(
     }
 )
 
-const Advertisement = mongoose.model("Movie", advertisementSchema);
+const Advertisement = mongoose.model("Advertisement", advertisementSchema);
 
 module.exports = Advertisement

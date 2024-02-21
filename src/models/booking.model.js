@@ -19,7 +19,7 @@ const bookingSchema = new mongoose.Schema(
             trim: true
         },
         booking_time: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         is_active:{

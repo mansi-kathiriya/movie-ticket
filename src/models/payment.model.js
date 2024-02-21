@@ -15,7 +15,7 @@ const paymentSchema = new mongoose.Schema(
             trim: true
         },
         payment_time: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         is_active:{

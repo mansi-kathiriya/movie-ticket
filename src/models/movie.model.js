@@ -10,6 +10,10 @@ const movieSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
+        image: {
+            type: String,
+            trim: true
+        },
         duration: {
             type: String,
             trim: true
@@ -19,7 +23,7 @@ const movieSchema = new mongoose.Schema(
             trim: true
         },
         release_date: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         is_active:{

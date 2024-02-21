@@ -11,11 +11,11 @@ const showtimeSchema = new mongoose.Schema(
             ref: "Theater",
         },
         start_Time: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         end_Time: {
-            type: Date(),
+            type: Date,
             trim: true
         },
         price: {

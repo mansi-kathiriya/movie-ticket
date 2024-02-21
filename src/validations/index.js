@@ -1,1 +1,12 @@
 module.exports.userValidation = require("./user.validation");
+module.exports.movieValidation = require("./movie.validation");
+module.exports.theaterValidation = require("./theater.validation");
+module.exports.showtimeValidation = require("./showtime.validation");
+module.exports.bookingValidation = require("./booking.validation");
+module.exports.ticketValidation = require("./ticket.validation");
+module.exports.seatValidation = require("./seat.validation");
+module.exports.reviewValidation = require("./review.validation");
+module.exports.paymentValidation = require("./payment.validation");
+module.exports.advertisementValidation = require("./advertisement.validation");
+module.exports.screenValidation = require("./screen.validation");
+module.exports.movielanguageValidation = require("./movielanguage.validation");

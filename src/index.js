@@ -14,9 +14,6 @@ app.use(bodyParser.json())
 
 app.use(cookieParser())
 
-// ejs view template
-app.set("view wngine","ejs");
-
 // routes
 app.use("/v1", routes)
 

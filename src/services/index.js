@@ -1,1 +1,12 @@
-module.exports.userService = require("./user.service")
+module.exports.userService = require("./user.service");
+module.exports.movieService = require("./movie.service");
+module.exports.theaterService = require("./theater.service");
+module.exports.showtimeService = require("./showtime.service");
+module.exports.bookingService = require("./booking.service");
+module.exports.ticketService = require("./ticket.service");
+module.exports.seatService = require("./seat.service");
+module.exports.reviewService = require("./review.service");
+module.exports.paymentService = require("./payment.service");
+module.exports.advertisementService = require("./advertisement.service");
+module.exports.screenService = require("./screen.service");
+module.exports.movielanguageService = require("./movielanguage.service");

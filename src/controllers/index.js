@@ -1,1 +1,12 @@
-module.exports.userController = require("./user.controller")
+module.exports.userController = require("./user.controller");
+module.exports.movieController = require("./movie.controller");
+module.exports.theaterController = require("./theater.controller");
+module.exports.showtimeController = require("./showtime.controller");
+module.exports.bookingController = require("./booking.controller");
+module.exports.ticketController = require("./ticket.controller");
+module.exports.seatController = require("./seat.controller");
+module.exports.reviewController = require("./review.controller");
+module.exports.paymentController = require("./payment.controller");
+module.exports.advertisementController = require("./advertisement.controller");
+module.exports.screenController = require("./screen.controller");
+module.exports.movielanguageController = require("./movielanguage.controller");
