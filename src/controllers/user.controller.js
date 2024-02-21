@@ -20,6 +20,7 @@ const register = async (req, res) => {
 
   if(user){
     let email = await send_mail(body.email, "Hello welcome", "welcome mail")
+    console.log(email)
   }
 
   res.status(200).json({

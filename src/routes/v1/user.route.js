@@ -2,14 +2,12 @@ const express = require("express");
 const { userController } = require("../../controllers");
 const { userValidation } = require("../../validations");
 const validate = require("../../middleware/validate");
-const { autheticate } = require("../../middleware/auth");
 
 const router = express.Router();
 
 /** register user */
 router.post(
     "/register",
-    autheticate,
     validate(userValidation.Register),
     userController.register
 );
